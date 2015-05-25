@@ -231,18 +231,18 @@ public class MainActivity extends PagerActivity
         adRequest = builder.build();
         mAdView.loadAd(adRequest);
         
-     // AD provider - adbuddiz.com
-        SharedPreferenceManager spm = SharedPreferenceManager.getInstance(mContext);
-        int viewCnt = spm.getInt("view_count");
-        if (viewCnt >= Config.AD_THRESHOLD) {
-        	spm.putInt("view_count", 0);
-            AdBuddiz.setPublisherKey(mContext.getString(R.string.adbuddiz_pub_key));
-            AdBuddiz.cacheAds((Activity)mContext);
-            AdBuddiz.showAd(this);
-        } else {
-        	viewCnt++;
-        	spm.putInt("view_count", viewCnt);
-        }
+     	// AD provider - adbuddiz.com
+//        SharedPreferenceManager spm = SharedPreferenceManager.getInstance(mContext);
+//        int viewCnt = spm.getInt("view_count");
+//        if (viewCnt >= Config.AD_THRESHOLD) {
+//        	spm.putInt("view_count", 0);
+//            AdBuddiz.setPublisherKey(mContext.getString(R.string.adbuddiz_pub_key));
+//            AdBuddiz.cacheAds((Activity)mContext);
+//            AdBuddiz.showAd(this);
+//        } else {
+//        	viewCnt++;
+//        	spm.putInt("view_count", viewCnt);
+//        }
 	}
 	
 	public void sendAnalytics() {
